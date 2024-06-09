@@ -1,5 +1,7 @@
 #!/bin/bash
 
+KEY_PATH=$1
+
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_ed25519_2
-ssh -T git@hf.com     
+ssh-add $KEY_PATH
+ssh -T git@hf.com
